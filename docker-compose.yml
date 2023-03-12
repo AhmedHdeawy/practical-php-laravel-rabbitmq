@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  rabbitmq:
+    hostname: 'dev-rabbitmq'
+    image: rabbitmq:3.11-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - '~/.docker-conf/rabbitmq/data:/var/lib/rabbitmq/mnesia/'
+    environment:
+      - RABBITMQ_DEFAULT_USER=guest
+      - RABBITMQ_DEFAULT_PASS=guest
+    networks:
+      - dev-rabbit-netwrok
+
+networks:
+  dev-rabbit-netwrok:
+    driver: bridge

@@ -1,0 +1,17 @@
+{
+    "name": "ahmedhdeawy/producer",
+    "require": {
+        "php-amqplib/php-amqplib": ">=3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ahmedhdeawy\\Producer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AhmedHdeawy",
+            "email": "ahmedhdeawy@gmail.com"
+        }
+    ]
+}
