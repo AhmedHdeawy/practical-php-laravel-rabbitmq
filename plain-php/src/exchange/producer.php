@@ -14,9 +14,6 @@ $exchangeName = 'direct_logs';
 $channel->exchange_declare($exchangeName, 'direct', false, false, false);
 // Fanout means that all messages will send to all queues
 
-var_dump( $_ENV['AHMED']);
-die;
-
 for ($i=0; $i < 100; $i++) {
     $routingKey = 'info';
     if ($i % 2 == 0) {
