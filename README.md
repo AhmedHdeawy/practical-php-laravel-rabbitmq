@@ -6,6 +6,7 @@
 
 - Work Queues
   - Distributing tasks among workers
+
   ![Distributing tasks among workers.](https://www.rabbitmq.com/img/tutorials/python-two.png)
 
 - Publish/Subscribe
