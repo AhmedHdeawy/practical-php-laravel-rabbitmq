@@ -23,3 +23,6 @@ $channel->basic_consume('log_q', '', false, false, false, false, $callback);
 while ($channel->is_open()) {
     $channel->wait();
 }
+
+$channel->close();
+$connection->close();

@@ -19,7 +19,7 @@ for ($i=0; $i < 100; $i++) {
         'name' => "Name #{$i}"
     ];
 
-    $msg = new AMQPMessage(json_encode($data));
+    $msg = new AMQPMessage(json_encode($data), array('delivery_mode' => AMQPMessage::DELIVERY_MODE_PERSISTENT));
 
     $channel->basic_publish($msg, '', 'log_q');
 
