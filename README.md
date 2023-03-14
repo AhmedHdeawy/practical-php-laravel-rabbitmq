@@ -2,7 +2,7 @@
 
 ## Practical examples using RabbitMQ in php and laravel
 
-### Hands-on examples to get you started with RabbitMQ using Native PHP like:
+# Plain PHP
 
 - ### Work Queues
   - Distributing tasks among workers
@@ -26,3 +26,23 @@
   - Request/reply pattern
 
   ![Request/reply pattern.](https://www.rabbitmq.com/img/tutorials/python-six.png)
+
+
+
+# Laravel
+
+### Use RabbitMQ as a default queue to handle all internal Jobs
+
+- Dispatch all jobs on one rabbitmq queue
+```
+  sail artisan rabbitmq:consume
+```
+
+
+### Pub/Sub 
+
+- Use rabbitmq to consume all published messages from any external servers, and this done through a command that is configure rabbitmq to consume messages
+
+```
+sail artisan app:rabbit-mq-subscriber
+```
