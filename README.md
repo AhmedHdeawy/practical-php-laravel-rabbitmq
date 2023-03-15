@@ -46,3 +46,6 @@
 ```
 sail artisan app:rabbit-mq-subscriber
 ```
+
+
+## Enjoy
